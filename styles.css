@@ -1,0 +1,283 @@
+/* styles.css */
+
+/* General Reset & Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #005f99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #005f99;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+header h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Navigation */
+nav {
+    background-color: #007acc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #005f99;
+    border-bottom: 2px solid white;
+}
+
+/* Hamburger & Mobile Nav */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+}
+
+#navLinks {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    background: #007acc;
+}
+
+#navLinks li {
+    margin: 0;
+}
+
+#navLinks a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        background-color: #007acc;
+    }
+
+    #navLinks.show {
+        display: flex;
+    }
+
+    #navLinks li {
+        border-bottom: 1px solid white;
+    }
+
+    #navLinks a {
+        padding: 14px;
+    }
+}
+
+/* Home Banner */
+.home-banner {
+    background: url('school.jpg') center/cover no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-content {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.home-content h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 6px #000000;
+    font-family: 'Arial Black', Impact, sans-serif;
+    margin: 0;
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+/* Image Box */
+.image-box {
+    position: relative;
+    text-align: center;
+    margin: 30px 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+}
+
+.text-overlay h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.text-overlay p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Accordion */
+.accordion {
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.accordion:hover {
+    background-color: #005f99;
+}
+
+.panel {
+    padding: 0 15px;
+    display: none;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    transition: all 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #005f99;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}/* Wrapper to push images down */
+.fade-wrapper {
+  margin-top: 60px;  /* adjust vertical gap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slideshow Container with smaller size */
+.slideshow-container {
+  position: relative;
+  width: 99%; /* Reduced size (change to 60% or 50% if needed) */
+  max-width: 700px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Slide Image Size */
+.slide-img {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Fade effect */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
